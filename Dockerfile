@@ -9,6 +9,7 @@ RUN yum install openssh -y
 RUN yum install awscli -y
 RUN yum install unzip -y
 RUN yum install which -y
+RUN yum install jq -y
 RUN npm install -g typescript glob
 RUN npm link glob
 RUN yum -y update && yum install -y sudo
