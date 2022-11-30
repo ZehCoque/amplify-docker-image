@@ -35,3 +35,7 @@ RUN unzip gradle-7.4.2-all.zip -d .
 RUN sudo rm gradle-7.4.2-all.zip
 ENV GRADLE_HOME=/codebuild/gradle/gradle-7.4.2
 ENV PATH=$PATH:$GRADLE_HOME/bin
+RUN gradle
+
+WORKDIR /codebuild
+COPY ./bundletool.jar .
