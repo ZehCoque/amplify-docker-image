@@ -15,8 +15,8 @@ RUN npm link glob
 RUN yum -y update && yum install -y sudo
 RUN sudo rpm --import https://yum.corretto.aws/corretto.key
 RUN sudo curl -L -o /etc/yum.repos.d/corretto.repo https://yum.corretto.aws/corretto.repo
-RUN sudo yum install -y java-11-amazon-corretto-devel
-ENV JAVA_HOME=/usr/lib/jvm/java-11-amazon-corretto
+RUN sudo yum install -y java-17-amazon-corretto-devel
+ENV JAVA_HOME=/usr/lib/jvm/java-17-amazon-corretto
 
 WORKDIR /codebuild/android-sdk
 RUN curl https://dl.google.com/android/repository/commandlinetools-linux-8512546_latest.zip -o android-sdk.zip 
