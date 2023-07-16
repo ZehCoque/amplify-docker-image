@@ -30,10 +30,10 @@ ENV ANDROID_HOME=/codebuild/android-sdk
 ENV PATH=$PATH:$ANDROID_HOME/build-tools/32.0.0
 
 WORKDIR /codebuild/gradle
-RUN curl -L https://services.gradle.org/distributions/gradle-7.4.2-all.zip -o gradle-7.4.2-all.zip
-RUN unzip gradle-7.4.2-all.zip -d .
-RUN sudo rm gradle-7.4.2-all.zip
-ENV GRADLE_HOME=/codebuild/gradle/gradle-7.4.2
+RUN curl -L https://services.gradle.org/distributions/gradle-8.2.1-all.zip -o gradle-8.2.1-all.zip
+RUN unzip gradle-8.2.1-all.zip -d .
+RUN sudo rm gradle-8.2.1-all.zip
+ENV GRADLE_HOME=/codebuild/gradle/gradle-8.2.1
 ENV PATH=$PATH:$GRADLE_HOME/bin
 RUN gradle
 
