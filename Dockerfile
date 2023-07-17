@@ -11,7 +11,6 @@ RUN yum install unzip -y
 RUN yum install which -y
 RUN yum install jq -y
 RUN npm install -g typescript glob
-RUN npm link glob
 RUN yum -y update && yum install -y sudo
 RUN sudo rpm --import https://yum.corretto.aws/corretto.key
 RUN sudo curl -L -o /etc/yum.repos.d/corretto.repo https://yum.corretto.aws/corretto.repo
